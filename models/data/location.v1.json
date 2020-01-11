@@ -1,0 +1,33 @@
+{
+  "title": "gnss",
+  "type": "object",
+  "x-tags": [
+    "data"
+  ],
+  "properties": {
+    "lat": {
+      "type": "number"
+    },
+    "lon": {
+      "type": "number"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "bearing": {
+      "type": "number"
+    },
+    "errLat": {
+      "type": "number"
+    },
+    "errLon": {
+      "type": "number"
+    },
+    "errSpeed": {
+      "type": "number"
+    },
+    "errBearing": {
+      "type": "number"
+    }
+  }
+}

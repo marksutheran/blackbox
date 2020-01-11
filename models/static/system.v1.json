@@ -16,6 +16,18 @@
     },
     "disk": {
       "type": "integer"
+    },
+    "osVersion": {
+      "type": "string"
+    },
+    "firmwareVersion": {
+      "type": "string"
+    },
+    "appVersion": {
+      "type": "string"
     }
-  }
+  },
+  "x-tags": [
+    "status"
+  ]
 }

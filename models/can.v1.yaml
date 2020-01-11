@@ -1,5 +1,0 @@
-title: can
-type: object
-properties:
-  id:
-    type: string

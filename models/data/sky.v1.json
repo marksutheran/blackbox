@@ -1,0 +1,28 @@
+{
+  "title": "sky",
+  "type": "object",
+  "x-tags": [
+    "data"
+  ],
+  "description": "GNSS sky view information",
+  "properties": {
+    "sats": {
+      "type": "integer"
+    },
+    "satsUsed": {
+      "type": "integer"
+    },
+    "fix": {
+      "type": "boolean"
+    },
+    "hdop": {
+      "type": "number"
+    },
+    "vdop": {
+      "type": "number"
+    },
+    "fixType": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+title: can
+type: object
+properties:
+  protocol:
+    type: string
+  baudRate:
+    type: integer
+x-tags:
+  - status

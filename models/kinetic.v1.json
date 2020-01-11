@@ -1,9 +1,0 @@
-{
-  "title": "kinetic",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-  }
-}

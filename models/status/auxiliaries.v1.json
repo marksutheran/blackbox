@@ -1,0 +1,18 @@
+{
+  "title": "auxiliaries",
+  "type": "object",
+  "x-tags": [
+    "status"
+  ],
+  "properties": {
+    "cameras": {
+      "type": "array",
+      "items": {
+        "$ref": "./camera.v1.json"
+      }
+    },
+    "gnssFIX": {
+      "type": "boolean"
+    }
+  }
+}

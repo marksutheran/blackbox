@@ -21,7 +21,16 @@
       "type": "string"
     },
     "startLocation": {
-      "$ref": "./location.v1.json"
+      "$ref": "./data/location.v1.json"
+    },
+    "active": {
+      "type": "boolean"
     }
-  }
+  },
+  "required": [
+    "active"
+  ],
+  "x-tags": [
+    "static"
+  ]
 }

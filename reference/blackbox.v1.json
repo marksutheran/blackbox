@@ -2,12 +2,530 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Blackbox",
-    "version": "1.0"
+    "version": "1.0",
+    "contact": {
+      "name": "Mark",
+      "email": "mark@clickdrive.io"
+    }
   },
   "servers": [
     {
       "url": "http://localhost:3000"
     }
   ],
-  "paths": {}
+  "paths": {
+    "/sessions": {
+      "parameters": [],
+      "get": {
+        "summary": "/sessions",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/session.v1.json"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-sessions-id",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "id",
+            "required": true
+          }
+        ],
+        "description": "Acess the session resources"
+      },
+      "post": {
+        "summary": "/sessions",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/session.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-sessions-id",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "description": ""
+        },
+        "description": "Access the Session resources"
+      },
+      "delete": {
+        "summary": "/sessions",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "delete-sessions-id",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "id",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/blackbox": {
+      "get": {
+        "summary": "/blackbox",
+        "tags": [
+          "static"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/blackbox.v1.json"
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/blackbox.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox",
+        "requestBody": {
+          "description": ""
+        },
+        "description": "Interact with teh Blackbox resource  "
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-blackbox",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "description": "Set Blackbox status "
+      }
+    },
+    "/blackbox/status": {
+      "get": {
+        "summary": "/blackbox/status",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/static/system.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-status",
+        "description": "Retrieve blackbox status information"
+      }
+    },
+    "/blackbox/cameras": {
+      "get": {
+        "summary": "/blackbox/cameras",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/status/camera.v1.json"
+                  }
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/status/camera.v1.json"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-status-aux",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "id",
+            "description": "Optionally specifiy camera id"
+          }
+        ],
+        "description": "Retrieve blackbox camera status information"
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-blackbox-cameras",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "description": "Interract with the camera resources",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blackbox/gnss": {
+      "get": {
+        "summary": "/blackbox/gnss",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/gnss.v1.yaml"
+                }
+              }
+            }
+          },
+          "": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/gnss.v1.yaml"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-status-gnss",
+        "description": "Retrieve blackbox GNSS status information"
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-blackbox-gnss",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Interract with the GNSS resource",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "active": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blackbox/canbus": {
+      "get": {
+        "summary": "/blackbox/canbus",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/can.v1.yaml"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-status-canbus",
+        "description": "Retrieve blackbox CANbus   status information"
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-blackbox-canbus",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "description": "Interract with the CANbus resource",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "connected": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blackbox/data/gnss": {
+      "get": {
+        "summary": "/blackbox/data/gnss",
+        "tags": [
+          "data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/data/location.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-data-location",
+        "description": "Retrieve location information"
+      },
+      "parameters": []
+    },
+    "/blackbox/data/canbus": {
+      "get": {
+        "summary": "/blackbox/data/canbus",
+        "tags": [
+          "data"
+        ],
+        "responses": {},
+        "operationId": "get-blackbox-data-canbus",
+        "description": "Retrieve canbus information"
+      }
+    },
+    "/blackbox/data/imu": {
+      "get": {
+        "summary": "/blackbox/data/imu",
+        "tags": [
+          "data"
+        ],
+        "responses": {},
+        "operationId": "get-blackbox-data-imu",
+        "description": "Retrieve IMU information"
+      }
+    },
+    "/blackbox/data/gnss/sky": {
+      "get": {
+        "summary": "/blackbox/data/gnss/sky",
+        "tags": [
+          "data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/data/sky.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-data-gnss-sats",
+        "description": "Retrieve GNSS satellite information"
+      },
+      "parameters": []
+    }
+  }
 }

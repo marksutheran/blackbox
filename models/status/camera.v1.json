@@ -1,0 +1,32 @@
+{
+  "title": "camera",
+  "type": "object",
+  "description": "Camera description",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "encoding": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "URI": {
+      "type": "string"
+    },
+    "frameRate": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "id",
+    "index"
+  ],
+  "x-tags": [
+    "status"
+  ]
+}

@@ -2,26 +2,26 @@
   "title": "Blackbox Status",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "cpu": {
-      "type": "number"
-    },
-    "load": {
-      "type": "number"
-    },
-    "memory": {
-      "type": "number"
-    },
-    "disk": {
+    "temp": {
       "type": "number"
     },
     "uptime": {
       "type": "integer"
     },
-    "temp": {
+    "disk": {
+      "type": "number"
+    },
+    "memory": {
+      "type": "number"
+    },
+    "load": {
+      "type": "number"
+    },
+    "cpu": {
       "type": "number"
     }
-  }
+  },
+  "x-tags": [
+    "status"
+  ]
 }

@@ -1,0 +1,13 @@
+title: gnss
+type: object
+description: Description of the GNSS system status
+x-tags:
+  - status
+properties:
+  antennaConnected:
+    type: boolean
+  engineOn:
+    type: boolean
+  fix:
+    type: boolean
+    description: "Does the GNSS system have a 'good' fix"
