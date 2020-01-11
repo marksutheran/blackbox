@@ -1,0 +1,25 @@
+{
+  "title": "canbus",
+  "type": "object",
+  "x-tags": [
+    "data"
+  ],
+  "description": "Simple model for CANbus data",
+  "properties": {
+    "ts": {
+      "type": "integer"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "rpm": {
+      "type": "number"
+    },
+    "tps": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "ts"
+  ]
+}

@@ -164,9 +164,9 @@
         "description": "Interact with teh Blackbox resource  "
       },
       "parameters": [],
-      "post": {
+      "put": {
         "summary": "",
-        "operationId": "post-blackbox",
+        "operationId": "put-blackbox",
         "responses": {
           "200": {
             "description": "OK",
@@ -283,7 +283,7 @@
       "parameters": [],
       "put": {
         "summary": "",
-        "operationId": "post-blackbox-cameras",
+        "operationId": "put-blackbox-cameras",
         "responses": {
           "200": {
             "description": "OK"
@@ -379,7 +379,7 @@
       "parameters": [],
       "put": {
         "summary": "",
-        "operationId": "post-blackbox-gnss",
+        "operationId": "put-blackbox-gnss",
         "responses": {
           "200": {
             "description": "OK"
@@ -426,7 +426,7 @@
       "parameters": [],
       "put": {
         "summary": "",
-        "operationId": "post-blackbox-canbus",
+        "operationId": "put-blackbox-canbus",
         "responses": {
           "200": {
             "description": "OK"
@@ -488,7 +488,18 @@
         "tags": [
           "data"
         ],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/data/canbus.v1.json"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-blackbox-data-canbus",
         "description": "Retrieve canbus information"
       }

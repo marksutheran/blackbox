@@ -23,6 +23,15 @@
     },
     "fixType": {
       "type": "string"
+    },
+    "ts": {
+      "type": "integer"
     }
-  }
+  },
+  "required": [
+    "sats",
+    "fix",
+    "fixType",
+    "ts"
+  ]
 }

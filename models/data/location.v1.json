@@ -28,6 +28,12 @@
     },
     "errBearing": {
       "type": "number"
+    },
+    "ts": {
+      "type": "integer"
     }
-  }
+  },
+  "required": [
+    "ts"
+  ]
 }
