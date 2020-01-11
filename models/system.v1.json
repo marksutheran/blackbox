@@ -1,0 +1,21 @@
+{
+  "title": "system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "cpu": {
+      "type": "string"
+    },
+    "cpuCount": {
+      "type": "integer"
+    },
+    "memory": {
+      "type": "integer"
+    },
+    "disk": {
+      "type": "integer"
+    }
+  }
+}

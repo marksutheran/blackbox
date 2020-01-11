@@ -1,0 +1,27 @@
+{
+  "title": "session",
+  "type": "object",
+  "x-examples": {
+    "example-1": {}
+  },
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "number"
+    },
+    "instructorId": {
+      "type": "string"
+    },
+    "instructorName": {
+      "type": "string"
+    },
+    "studentName": {
+      "type": "string"
+    },
+    "startLocation": {
+      "$ref": "./location.v1.json"
+    }
+  }
+}

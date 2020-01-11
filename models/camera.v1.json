@@ -1,0 +1,9 @@
+{
+  "title": "camera",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

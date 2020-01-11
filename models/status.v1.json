@@ -1,0 +1,27 @@
+{
+  "title": "Blackbox Status",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "cpu": {
+      "type": "number"
+    },
+    "load": {
+      "type": "number"
+    },
+    "memory": {
+      "type": "number"
+    },
+    "disk": {
+      "type": "number"
+    },
+    "uptime": {
+      "type": "integer"
+    },
+    "temp": {
+      "type": "number"
+    }
+  }
+}
