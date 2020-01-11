@@ -281,7 +281,7 @@
         "description": "Retrieve blackbox camera status information"
       },
       "parameters": [],
-      "post": {
+      "put": {
         "summary": "",
         "operationId": "post-blackbox-cameras",
         "responses": {
@@ -377,7 +377,7 @@
         "description": "Retrieve blackbox GNSS status information"
       },
       "parameters": [],
-      "post": {
+      "put": {
         "summary": "",
         "operationId": "post-blackbox-gnss",
         "responses": {
@@ -424,7 +424,7 @@
         "description": "Retrieve blackbox CANbus   status information"
       },
       "parameters": [],
-      "post": {
+      "put": {
         "summary": "",
         "operationId": "post-blackbox-canbus",
         "responses": {
