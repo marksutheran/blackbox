@@ -1,7 +1,10 @@
 {
   "title": "camera",
   "type": "object",
-  "description": "Camera description",
+  "description": "Camera static description",
+  "x-tags": [
+    "status"
+  ],
   "properties": {
     "id": {
       "type": "string"
@@ -20,13 +23,16 @@
     },
     "frameRate": {
       "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "rotation": {
+      "type": "number"
     }
   },
   "required": [
     "id",
     "index"
-  ],
-  "x-tags": [
-    "status"
   ]
 }

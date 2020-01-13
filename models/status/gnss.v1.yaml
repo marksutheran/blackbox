@@ -6,8 +6,10 @@ x-tags:
 properties:
   antennaConnected:
     type: boolean
-  engineOn:
+  gnssEngineOn:
     type: boolean
   fix:
     type: boolean
     description: "Does the GNSS system have a 'good' fix"
+  fixTime:
+    type: integer

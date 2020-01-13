@@ -1,6 +1,22 @@
 {
   "title": "system",
   "type": "object",
+  "x-tags": [
+    "status"
+  ],
+  "description": "System description for the Blackbox internals",
+  "x-examples": {
+    "example-1": {
+      "id": "xyz",
+      "cpu": "atom-3650",
+      "cores": 4,
+      "memory": 4,
+      "disk": 80,
+      "osVersion": "1.12",
+      "firmwareVersion": "1.23434",
+      "appVersion": "2.0"
+    }
+  },
   "properties": {
     "id": {
       "type": "string"
@@ -8,7 +24,7 @@
     "cpu": {
       "type": "string"
     },
-    "cpuCount": {
+    "cores": {
       "type": "integer"
     },
     "memory": {
@@ -25,9 +41,15 @@
     },
     "appVersion": {
       "type": "string"
+    },
+    "imu": {
+      "type": "string"
+    },
+    "gnss": {
+      "type": "string"
     }
   },
-  "x-tags": [
-    "status"
+  "required": [
+    "id"
   ]
 }

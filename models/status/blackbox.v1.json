@@ -1,27 +1,44 @@
 {
   "title": "Blackbox Status",
   "type": "object",
-  "properties": {
-    "temp": {
-      "type": "number"
-    },
-    "uptime": {
-      "type": "integer"
-    },
-    "disk": {
-      "type": "number"
-    },
-    "memory": {
-      "type": "number"
-    },
-    "load": {
-      "type": "number"
-    },
-    "cpu": {
-      "type": "number"
-    }
-  },
   "x-tags": [
     "status"
-  ]
+  ],
+  "description": "The current status of the Blackbox itself",
+  "x-examples": {
+    "example-1": {
+      "uptime": 1234,
+      "cpu": 34.5,
+      "temp": 67.8,
+      "disk": 57.8,
+      "memory": 45,
+      "load": 1.57
+    }
+  },
+  "properties": {
+    "temp": {
+      "type": "number",
+      "description": "System temperature"
+    },
+    "uptime": {
+      "type": "integer",
+      "description": "System uptime"
+    },
+    "disk": {
+      "type": "number",
+      "description": "Percentage disk usage"
+    },
+    "memory": {
+      "type": "number",
+      "description": "Percentage memory usage"
+    },
+    "load": {
+      "type": "number",
+      "description": "System load"
+    },
+    "cpu": {
+      "type": "number",
+      "description": "CPU utilisation percentage"
+    }
+  }
 }

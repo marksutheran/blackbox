@@ -2,8 +2,22 @@
   "title": "session",
   "type": "object",
   "x-examples": {
-    "example-1": {}
+    "example-1": {
+      "id": "3434_1432443434",
+      "startTime": 1432443434,
+      "instructorId": 3434,
+      "instructorName": "bob",
+      "studentName": "alice",
+      "startLocation": {
+        "lat": 1.343434,
+        "lon": 107.3434
+      }
+    }
   },
+  "x-tags": [
+    "static"
+  ],
+  "description": "Session Data",
   "properties": {
     "id": {
       "type": "string"
@@ -21,16 +35,16 @@
       "type": "string"
     },
     "startLocation": {
-      "$ref": "./data/location.v1.json"
+      "$ref": "../data/location.v1.json"
     },
     "active": {
       "type": "boolean"
+    },
+    "meta": {
+      "$ref": "./metadata.v1.json"
     }
   },
   "required": [
     "active"
-  ],
-  "x-tags": [
-    "static"
   ]
 }

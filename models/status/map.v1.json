@@ -1,0 +1,22 @@
+{
+  "title": "map",
+  "type": "object",
+  "x-tags": [
+    "status"
+  ],
+  "description": "Offline map database",
+  "properties": {
+    "size": {
+      "type": "number"
+    },
+    "lastUpdated": {
+      "type": "integer"
+    },
+    "bounds": {
+      "type": "array",
+      "items": {
+        "$ref": "../data/location.v1.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "imu",
+  "type": "object",
+  "x-tags": [
+    "status"
+  ],
+  "description": "",
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

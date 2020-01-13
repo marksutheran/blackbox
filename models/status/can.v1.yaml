@@ -1,9 +1,13 @@
 title: can
 type: object
+x-tags:
+  - status
 properties:
   protocol:
     type: string
   baudRate:
     type: integer
-x-tags:
-  - status
+  connected:
+    type: boolean
+  connectionTime:
+    type: integer

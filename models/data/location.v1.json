@@ -4,6 +4,15 @@
   "x-tags": [
     "data"
   ],
+  "description": "Location data from the GNSS system",
+  "x-examples": {
+    "example-1": {
+      "lat": 1.034343,
+      "lon": 107.3434,
+      "speed": 14.1,
+      "bearing": 276
+    }
+  },
   "properties": {
     "lat": {
       "type": "number"
@@ -28,12 +37,10 @@
     },
     "errBearing": {
       "type": "number"
-    },
-    "ts": {
-      "type": "integer"
     }
   },
   "required": [
-    "ts"
+    "lat",
+    "lon"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "title": "metadata",
+  "type": "object",
+  "x-tags": [
+    "static"
+  ],
+  "description": "Session MetaData Structure",
+  "properties": {
+    "cameras": {
+      "type": "array",
+      "description": "Ordered list of cameras available",
+      "items": {
+        "$ref": "../status/camera.v1.json"
+      }
+    }
+  }
+}

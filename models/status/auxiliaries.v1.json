@@ -1,9 +1,9 @@
 {
   "title": "auxiliaries",
-  "type": "object",
   "x-tags": [
     "status"
   ],
+  "type": "object",
   "properties": {
     "cameras": {
       "type": "array",
@@ -11,8 +11,12 @@
         "$ref": "./camera.v1.json"
       }
     },
-    "gnssFIX": {
-      "type": "boolean"
+    "gnss": {
+      "$ref": "./gnss.v1.yaml"
+    },
+    "imu": {
+      "$ref": "./imu.v1.json"
     }
-  }
+  },
+  "description": "Structure to hold the current status of all the system auxiliaries"
 }

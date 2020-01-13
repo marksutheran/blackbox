@@ -1,12 +1,25 @@
 {
   "title": "data.v1.json",
   "type": "object",
+  "x-examples": {
+    "example-1": {
+      "name": "can.speed",
+      "ts": 1231231233123,
+      "value": 51.2
+    }
+  },
+  "x-tags": [
+    "data"
+  ],
+  "description": "Container for sensor data from the Blackbox",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "description": "Name of the data channel"
     },
     "ts": {
-      "type": "integer"
+      "type": "integer",
+      "description": "UNIX timestamp, 64bit"
     },
     "value": {
       "oneOf": [
@@ -18,18 +31,18 @@
         },
         {
           "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
         }
       ]
     }
   },
-  "x-examples": {
-    "example-1": {
-      "name": "speed",
-      "ts": 1231231233123,
-      "value": 51.2
-    }
-  },
-  "x-tags": [
-    "data"
+  "required": [
+    "name",
+    "ts"
   ]
 }
