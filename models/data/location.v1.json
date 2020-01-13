@@ -1,5 +1,5 @@
 {
-  "title": "gnss",
+  "title": "location",
   "type": "object",
   "x-tags": [
     "data"
