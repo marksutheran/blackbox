@@ -511,9 +511,9 @@
       },
       "parameters": []
     },
-    "/blackbox/data/canbus": {
+    "/blackbox/data": {
       "get": {
-        "summary": "/blackbox/data/canbus",
+        "summary": "/blackbox/data",
         "tags": [
           "data"
         ],
@@ -537,42 +537,20 @@
                 }
               }
             }
-          }
-        },
-        "operationId": "get-blackbox-data-canbus",
-        "description": "Retrieve canbus data",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "in": "query",
-            "name": "channel",
-            "description": "Data channel to retrieve"
-          }
-        ]
-      }
-    },
-    "/blackbox/data/imu": {
-      "get": {
-        "summary": "/blackbox/data/imu",
-        "tags": [
-          "data"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
+          },
+          "500": {
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/data/data.v1.json"
+                  "$ref": "../models/error.v1.json"
                 }
               }
             }
           }
         },
-        "operationId": "get-blackbox-data-imu",
-        "description": "Retrieve IMU information",
+        "operationId": "get-blackbox-data-canbus",
+        "description": "Retrieve data by channel",
         "parameters": [
           {
             "schema": {
@@ -580,10 +558,12 @@
             },
             "in": "query",
             "name": "channel",
-            "description": "IMU data channel to receive \"acc\" or \"gyr\""
+            "description": "Data channel to retrieve",
+            "required": true
           }
         ]
-      }
+      },
+      "parameters": []
     },
     "/blackbox/data/gnss": {
       "get": {
