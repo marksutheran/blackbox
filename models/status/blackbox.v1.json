@@ -12,7 +12,9 @@
       "temp": 67.8,
       "disk": 57.8,
       "memory": 45,
-      "load": 1.57
+      "load": 1.57,
+      "state": "running",
+      "nextState": "restart"
     }
   },
   "properties": {
@@ -39,6 +41,18 @@
     "cpu": {
       "type": "number",
       "description": "CPU utilisation percentage"
+    },
+    "state": {
+      "type": "string",
+      "description": "Current system state"
+    },
+    "nextState": {
+      "type": "string",
+      "description": "Impending system state (e.g. shutdown)"
     }
-  }
+  },
+  "required": [
+    "state",
+    "nextState"
+  ]
 }
