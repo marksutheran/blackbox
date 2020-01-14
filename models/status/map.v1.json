@@ -7,16 +7,34 @@
   "description": "Offline map database",
   "properties": {
     "size": {
-      "type": "number"
+      "type": "number",
+      "description": "offline map size in MB"
     },
     "lastUpdated": {
-      "type": "integer"
+      "type": "integer",
+      "description": "UNIX time"
     },
     "bounds": {
       "type": "array",
       "items": {
         "$ref": "../data/location.v1.json"
       }
+    }
+  },
+  "x-examples": {
+    "example-1": {
+      "size": 2000,
+      "lastUpdated": 1232354343,
+      "bounds": [
+        {
+          "lat": 1.2323,
+          "lon": 107.3434
+        },
+        {
+          "lat": 1.33434,
+          "lon": 108.123
+        }
+      ]
     }
   }
 }

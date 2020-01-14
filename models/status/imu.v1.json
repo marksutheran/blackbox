@@ -4,13 +4,32 @@
   "x-tags": [
     "status"
   ],
-  "description": "",
+  "description": "Status if the IMU ",
+  "x-examples": {
+    "example-1": {
+      "active": true,
+      "normalised": true,
+      "orientation": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
   "properties": {
-    "model": {
-      "type": "string"
+    "normalised": {
+      "type": "boolean"
     },
     "active": {
       "type": "boolean"
+    },
+    "orientation": {
+      "type": "array",
+      "description": "orientation of the blackbox",
+      "items": {
+        "type": "number"
+      }
     }
   }
 }

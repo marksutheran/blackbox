@@ -5,13 +5,16 @@
     "example-1": {
       "id": "3434_1432443434",
       "startTime": 1432443434,
+      "duration": 2343,
       "instructorId": 3434,
       "instructorName": "bob",
-      "studentName": "alice",
+      "driverFirstName": "alice",
+      "driverLastName": "smith",
       "startLocation": {
         "lat": 1.343434,
         "lon": 107.3434
-      }
+      },
+      "active": false
     }
   },
   "x-tags": [
@@ -31,9 +34,6 @@
     "instructorName": {
       "type": "string"
     },
-    "studentName": {
-      "type": "string"
-    },
     "startLocation": {
       "$ref": "../data/location.v1.json"
     },
@@ -42,6 +42,21 @@
     },
     "meta": {
       "$ref": "./metadata.v1.json"
+    },
+    "trainIngProgram": {
+      "type": "string"
+    },
+    "vehicleType": {
+      "type": "string"
+    },
+    "driverFirstName": {
+      "type": "string"
+    },
+    "driverLastName": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "integer"
     }
   },
   "required": [

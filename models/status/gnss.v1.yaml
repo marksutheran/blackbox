@@ -3,6 +3,12 @@ type: object
 description: Description of the GNSS system status
 x-tags:
   - status
+x-examples:
+  example-1:
+    antennaConnected: true
+    gnssEngineOn: true
+    fix: false
+    fixTime: -1
 properties:
   antennaConnected:
     type: boolean

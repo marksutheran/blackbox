@@ -6,7 +6,8 @@
     "contact": {
       "name": "Mark",
       "email": "mark@clickdrive.io"
-    }
+    },
+    "description": "Blackbox Video and Telematics Recorder REST API Specification"
   },
   "servers": [
     {
@@ -19,7 +20,7 @@
       "get": {
         "summary": "/sessions",
         "tags": [
-          "status"
+          "static"
         ],
         "responses": {
           "200": {
@@ -126,7 +127,8 @@
             "name": "id",
             "required": true
           }
-        ]
+        ],
+        "description": "Interract with the Sessions resource"
       },
       "put": {
         "summary": "",
@@ -146,7 +148,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "static"
+        ]
       }
     },
     "/blackbox": {
@@ -177,10 +182,10 @@
           }
         },
         "operationId": "get-blackbox",
+        "description": "Interact with teh Blackbox resource  ",
         "requestBody": {
           "description": ""
-        },
-        "description": "Interact with teh Blackbox resource  "
+        }
       },
       "parameters": [],
       "put": {
@@ -219,7 +224,17 @@
             }
           }
         },
-        "description": "Set Blackbox status "
+        "description": "Set Blackbox status ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/status/blackbox.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
       }
     },
     "/blackbox/status": {
@@ -362,7 +377,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "status"
+        ]
       }
     },
     "/blackbox/gnss": {
@@ -418,7 +436,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "status"
+        ]
       }
     },
     "/blackbox/canbus": {
@@ -475,7 +496,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "status"
+        ]
       }
     },
     "/blackbox/data/location": {
@@ -588,5 +612,8 @@
       },
       "parameters": []
     }
+  },
+  "components": {
+    "securitySchemes": {}
   }
 }

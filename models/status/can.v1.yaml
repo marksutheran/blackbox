@@ -11,3 +11,4 @@ properties:
     type: boolean
   connectionTime:
     type: integer
+description: Status definition of the CANbus connection (if present)

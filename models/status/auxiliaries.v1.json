@@ -18,5 +18,8 @@
       "$ref": "./imu.v1.json"
     }
   },
-  "description": "Structure to hold the current status of all the system auxiliaries"
+  "description": "Structure to hold the current status of all the system auxiliaries",
+  "x-examples": {
+    "example-1": {}
+  }
 }

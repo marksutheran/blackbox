@@ -12,6 +12,30 @@
       "items": {
         "$ref": "../status/camera.v1.json"
       }
+    },
+    "videoTimeOffset": {
+      "type": "integer"
+    },
+    "gnssTimeOffset": {
+      "type": "integer"
+    },
+    "blackboxOrientation": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "x-examples": {
+    "example-1": {
+      "videoTimeOffset": 1000,
+      "gnssTimeOffset": -1000,
+      "blackboxOrientation": [
+        1,
+        2,
+        3,
+        4
+      ]
     }
   }
 }

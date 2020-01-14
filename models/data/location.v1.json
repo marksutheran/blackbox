@@ -21,7 +21,8 @@
       "type": "number"
     },
     "speed": {
-      "type": "number"
+      "type": "number",
+      "description": "Speed in Ms-1  "
     },
     "bearing": {
       "type": "number"

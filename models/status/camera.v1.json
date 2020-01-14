@@ -5,6 +5,17 @@
   "x-tags": [
     "status"
   ],
+  "x-examples": {
+    "example-1": {
+      "id": "camera_123",
+      "index": 1,
+      "resolution": "1080.1920",
+      "frameRate": 15,
+      "URI": "rtsp://xxx.yyy.zzz/play",
+      "rotation": 270,
+      "active": false
+    }
+  },
   "properties": {
     "id": {
       "type": "string"
@@ -28,7 +39,12 @@
       "type": "boolean"
     },
     "rotation": {
-      "type": "number"
+      "type": "number",
+      "description": "The video rotation angle in degrees"
+    },
+    "location": {
+      "type": "string",
+      "description": "The camera location in vehicle  "
     }
   },
   "required": [

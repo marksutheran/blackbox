@@ -17,22 +17,28 @@
   },
   "properties": {
     "sats": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Number of visible satellites"
     },
     "satsUsed": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Number of satellites used in the FIX"
     },
     "fix": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Has FIX been aquired"
     },
     "hdop": {
-      "type": "number"
+      "type": "number",
+      "description": "horizontal dilution of precision"
     },
     "vdop": {
-      "type": "number"
+      "type": "number",
+      "description": "vertical dilution of precision"
     },
     "fixType": {
-      "type": "string"
+      "type": "string",
+      "description": "FIX type achieved (None, 2D, 3D)"
     }
   },
   "required": [
