@@ -15,8 +15,17 @@
     }
   ],
   "paths": {
-    "/sessions": {
-      "parameters": [],
+    "/sessions/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
       "get": {
         "summary": "/sessions",
         "tags": [
@@ -175,7 +184,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/status/blackbox.v1.json"
+                  "$ref": "../models/static/system.v1.json"
                 }
               }
             }
@@ -187,55 +196,7 @@
           "description": ""
         }
       },
-      "parameters": [],
-      "put": {
-        "summary": "",
-        "operationId": "put-blackbox",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {}
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "../models/error.v1.json"
-                }
-              }
-            }
-          },
-          "501": {
-            "description": "Not Implemented",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "../models/error.v1.json"
-                }
-              }
-            }
-          }
-        },
-        "description": "Set Blackbox status ",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "../models/status/blackbox.v1.json"
-              }
-            }
-          },
-          "description": ""
-        }
-      }
+      "parameters": []
     },
     "/blackbox/status": {
       "get": {
@@ -249,7 +210,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/static/system.v1.json"
+                  "$ref": "../models/status/blackbox.v1.json"
                 }
               }
             }
@@ -257,9 +218,36 @@
         },
         "operationId": "get-blackbox-status",
         "description": "Retrieve blackbox status information"
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-blackbox-status",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/status/blackbox.v1.json"
+              }
+            }
+          }
+        }
       }
     },
-    "/blackbox/cameras": {
+    "/blackbox/cameras/{id}": {
       "get": {
         "summary": "/blackbox/cameras",
         "tags": [
@@ -314,7 +302,15 @@
         ],
         "description": "Retrieve blackbox camera status information"
       },
-      "parameters": [],
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path"
+        }
+      ],
       "put": {
         "summary": "",
         "operationId": "put-blackbox-cameras",
@@ -535,7 +531,7 @@
       },
       "parameters": []
     },
-    "/blackbox/data": {
+    "/blackbox/data/{channel}": {
       "get": {
         "summary": "/blackbox/data",
         "tags": [
@@ -575,19 +571,18 @@
         },
         "operationId": "get-blackbox-data-canbus",
         "description": "Retrieve data by channel",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "in": "query",
-            "name": "channel",
-            "description": "Data channel to retrieve",
-            "required": true
-          }
-        ]
+        "parameters": []
       },
-      "parameters": []
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "channel",
+          "in": "path",
+          "required": true
+        }
+      ]
     },
     "/blackbox/data/gnss": {
       "get": {
@@ -611,6 +606,13 @@
         "description": "Retrieve GNSS satellite data"
       },
       "parameters": []
+    },
+    "/sessions": {
+      "parameters": [
+        {
+          "required": true
+        }
+      ]
     }
   },
   "components": {

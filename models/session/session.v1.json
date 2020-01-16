@@ -43,7 +43,7 @@
     "meta": {
       "$ref": "./metadata.v1.json"
     },
-    "trainIngProgram": {
+    "trainingProgram": {
       "type": "string"
     },
     "vehicleType": {
