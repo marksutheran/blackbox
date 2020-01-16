@@ -22,8 +22,7 @@
             "type": "string"
           },
           "name": "id",
-          "in": "path",
-          "required": true
+          "in": "path"
         }
       ],
       "get": {
@@ -611,6 +610,91 @@
       "parameters": [
         {
           "required": true
+        }
+      ]
+    },
+    "/blackbox/incidents/manual/{name}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "name",
+          "in": "path"
+        }
+      ],
+      "get": {
+        "summary": "Retrieve manual incidents",
+        "tags": [
+          "data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/data/manualincident.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-incidents-manual-name",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/data/manualincident.v1.json"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Submit manual incidents",
+        "tags": [
+          "data"
+        ],
+        "responses": {},
+        "operationId": "post-blackbox-incidents-manual-name"
+      },
+      "delete": {
+        "summary": "Remove manual incidents",
+        "tags": [
+          "data"
+        ],
+        "responses": {},
+        "operationId": "delete-blackbox-incidents-manual-name"
+      }
+    },
+    "/blackbox/incidents/auto/{name}": {
+      "get": {
+        "summary": "Retrieve automated incidents",
+        "tags": [
+          "data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/data/automatedincident.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-incidents-auto"
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "name",
+          "in": "path"
         }
       ]
     }

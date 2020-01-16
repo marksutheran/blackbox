@@ -1,0 +1,33 @@
+{
+  "title": "manualIncident",
+  "type": "object",
+  "x-examples": {
+    "example-1": {
+      "timestamp": 123232333
+    }
+  },
+  "description": "Model of a manual driving infringement",
+  "properties": {
+    "demeritType": {
+      "type": "string"
+    },
+    "invringementText": {
+      "type": "string"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "location": {
+      "$ref": "./location.v1.json"
+    }
+  },
+  "x-tags": [
+    "data"
+  ]
+}

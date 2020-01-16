@@ -1,0 +1,25 @@
+{
+  "title": "automatedIncident",
+  "type": "object",
+  "x-tags": [
+    "data"
+  ],
+  "description": "Model of an automated driving infringement",
+  "properties": {
+    "location": {
+      "$ref": "./location.v1.json"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "demeritType": {
+      "type": "string"
+    }
+  }
+}
