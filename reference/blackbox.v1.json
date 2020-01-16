@@ -164,7 +164,7 @@
     },
     "/blackbox": {
       "get": {
-        "summary": "/blackbox",
+        "summary": "Retrieve blackbox information",
         "tags": [
           "static"
         ],
@@ -199,7 +199,7 @@
     },
     "/blackbox/status": {
       "get": {
-        "summary": "/blackbox/status",
+        "summary": "Manage blackbox status",
         "tags": [
           "status"
         ],
@@ -248,7 +248,7 @@
     },
     "/blackbox/cameras/{id}": {
       "get": {
-        "summary": "/blackbox/cameras",
+        "summary": "Manage Blackbox cameras",
         "tags": [
           "status"
         ],
@@ -380,7 +380,7 @@
     },
     "/blackbox/gnss": {
       "get": {
-        "summary": "/blackbox/gnss",
+        "summary": "Manage Blackbox GNSS status",
         "tags": [
           "status"
         ],
@@ -439,7 +439,7 @@
     },
     "/blackbox/canbus": {
       "get": {
-        "summary": "/blackbox/canbus",
+        "summary": "Retrieve Blackbox CANbus status",
         "tags": [
           "status"
         ],
@@ -499,7 +499,7 @@
     },
     "/blackbox/data/location": {
       "get": {
-        "summary": "/blackbox/data/location",
+        "summary": "Retrieve blackbox location",
         "tags": [
           "data"
         ],
@@ -532,7 +532,7 @@
     },
     "/blackbox/data/{channel}": {
       "get": {
-        "summary": "/blackbox/data",
+        "summary": "Retrieve Blackbox Data by channel",
         "tags": [
           "data"
         ],
@@ -585,7 +585,7 @@
     },
     "/blackbox/data/gnss": {
       "get": {
-        "summary": "/blackbox/data/gnss",
+        "summary": "Retrieve blackbox GNSS information",
         "tags": [
           "data"
         ],
