@@ -41,18 +41,6 @@
     "cpu": {
       "type": "number",
       "description": "CPU utilisation percentage"
-    },
-    "state": {
-      "type": "string",
-      "description": "Current system state"
-    },
-    "nextState": {
-      "type": "string",
-      "description": "Impending system state (e.g. shutdown)"
     }
-  },
-  "required": [
-    "state",
-    "nextState"
-  ]
+  }
 }

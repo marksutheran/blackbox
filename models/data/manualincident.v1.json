@@ -7,11 +7,14 @@
     }
   },
   "description": "Model of a manual driving infringement",
+  "x-tags": [
+    "data"
+  ],
   "properties": {
     "demeritType": {
       "type": "string"
     },
-    "invringementText": {
+    "infringementText": {
       "type": "string"
     },
     "points": {
@@ -26,8 +29,5 @@
     "location": {
       "$ref": "./location.v1.json"
     }
-  },
-  "x-tags": [
-    "data"
-  ]
+  }
 }

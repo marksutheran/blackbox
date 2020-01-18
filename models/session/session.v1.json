@@ -26,7 +26,7 @@
       "type": "string"
     },
     "startTime": {
-      "type": "number"
+      "type": "integer"
     },
     "instructorId": {
       "type": "string"

@@ -39,7 +39,7 @@
       "type": "boolean"
     },
     "rotation": {
-      "type": "number",
+      "type": "integer",
       "description": "The video rotation angle in degrees"
     },
     "location": {

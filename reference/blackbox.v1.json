@@ -697,6 +697,45 @@
           "in": "path"
         }
       ]
+    },
+    "/blackbox/state": {
+      "get": {
+        "summary": "Retrieve automated incidents",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-state",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "description": "Interract with the blackbox State"
+      },
+      "put": {
+        "summary": "Update the blackbox state",
+        "tags": [
+          "status"
+        ],
+        "responses": {},
+        "operationId": "put-blackbox-state"
+      }
     }
   },
   "components": {
