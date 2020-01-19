@@ -174,7 +174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/status/blackbox.v1.json"
+                  "$ref": "../models/static/system.v1.json"
                 }
               }
             }
@@ -217,33 +217,6 @@
         },
         "operationId": "get-blackbox-status",
         "description": "Retrieve blackbox status information"
-      },
-      "put": {
-        "summary": "",
-        "operationId": "put-blackbox-status",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "501": {
-            "description": "Not Implemented"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "../models/status/blackbox.v1.json"
-              }
-            }
-          }
-        }
       }
     },
     "/blackbox/cameras/{id}": {
