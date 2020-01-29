@@ -28,7 +28,7 @@
       "get": {
         "summary": "Retrieve a Session",
         "tags": [
-          "static"
+          "status"
         ],
         "responses": {
           "200": {
@@ -212,7 +212,7 @@
           }
         },
         "tags": [
-          "static"
+          "status"
         ]
       }
     },
