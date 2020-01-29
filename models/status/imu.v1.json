@@ -1,5 +1,5 @@
 {
-  "title": "imu",
+  "title": "IMU",
   "type": "object",
   "x-tags": [
     "status"

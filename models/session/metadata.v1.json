@@ -1,5 +1,5 @@
 {
-  "title": "metadata",
+  "title": "Session Metadata",
   "type": "object",
   "x-tags": [
     "static"

@@ -26,7 +26,7 @@
         }
       ],
       "get": {
-        "summary": "/sessions",
+        "summary": "Retrieve a Session",
         "tags": [
           "static"
         ],
@@ -83,10 +83,10 @@
             "name": "id"
           }
         ],
-        "description": "Acess the session resources"
+        "description": "Retrieve Session information"
       },
       "post": {
-        "summary": "/sessions",
+        "summary": "Create a Session",
         "tags": [
           "status"
         ],
@@ -136,7 +136,7 @@
         "description": "Create a new Session"
       },
       "delete": {
-        "summary": "/sessions",
+        "summary": "Delete a session",
         "tags": [
           "status"
         ],
@@ -173,10 +173,10 @@
             "required": true
           }
         ],
-        "description": "Interract with the Sessions resource"
+        "description": "Delete the specified Session"
       },
       "put": {
-        "summary": "",
+        "summary": "Update a Session",
         "operationId": "put-sessions",
         "responses": {
           "200": {
@@ -200,7 +200,7 @@
             }
           }
         },
-        "description": "Update Session information",
+        "description": "Update the Session information",
         "parameters": [],
         "requestBody": {
           "content": {
@@ -218,7 +218,7 @@
     },
     "/blackbox": {
       "get": {
-        "summary": "Retrieve blackbox information",
+        "summary": "Retrieve Blackbox information",
         "tags": [
           "static"
         ],
@@ -253,7 +253,7 @@
     },
     "/blackbox/status": {
       "get": {
-        "summary": "Manage blackbox status",
+        "summary": "Retrieve Blackbox status",
         "tags": [
           "status"
         ],
@@ -275,7 +275,7 @@
     },
     "/blackbox/cameras/{id}": {
       "get": {
-        "summary": "Manage Blackbox cameras",
+        "summary": "Retrieve Camera information",
         "tags": [
           "status"
         ],
@@ -338,7 +338,7 @@
         }
       ],
       "put": {
-        "summary": "",
+        "summary": "Update Camera information",
         "operationId": "put-blackbox-cameras",
         "responses": {
           "200": {
@@ -407,7 +407,7 @@
     },
     "/blackbox/gnss": {
       "get": {
-        "summary": "Manage Blackbox GNSS status",
+        "summary": "Retrieve GNSS status",
         "tags": [
           "status"
         ],
@@ -437,7 +437,7 @@
       },
       "parameters": [],
       "put": {
-        "summary": "",
+        "summary": "Update GNSS status",
         "operationId": "put-blackbox-gnss",
         "responses": {
           "200": {
@@ -466,7 +466,7 @@
     },
     "/blackbox/canbus": {
       "get": {
-        "summary": "Retrieve Blackbox CANbus status",
+        "summary": "Retrieve CANbus status",
         "tags": [
           "status"
         ],
@@ -487,7 +487,7 @@
       },
       "parameters": [],
       "put": {
-        "summary": "",
+        "summary": "Update CANbus status",
         "operationId": "put-blackbox-canbus",
         "responses": {
           "200": {
@@ -526,7 +526,7 @@
     },
     "/blackbox/data/location": {
       "get": {
-        "summary": "Retrieve blackbox location",
+        "summary": "Retrieve location",
         "tags": [
           "data"
         ],
@@ -559,7 +559,7 @@
     },
     "/blackbox/data/{channel}": {
       "get": {
-        "summary": "Retrieve Blackbox Data by channel",
+        "summary": "Retrieve Data by channel",
         "tags": [
           "data"
         ],
@@ -612,7 +612,7 @@
     },
     "/blackbox/data/gnss": {
       "get": {
-        "summary": "Retrieve blackbox GNSS information",
+        "summary": "Retrieve GNSS information",
         "tags": [
           "data"
         ],
@@ -676,7 +676,8 @@
               }
             }
           }
-        }
+        },
+        "description": "Retrieve Manual Incidents for current session"
       },
       "post": {
         "summary": "Submit manual incidents",
@@ -684,7 +685,8 @@
           "data"
         ],
         "responses": {},
-        "operationId": "post-blackbox-incidents-manual-name"
+        "operationId": "post-blackbox-incidents-manual-name",
+        "description": "Create a new Manual Incident for the current Session"
       },
       "delete": {
         "summary": "Remove manual incidents",
@@ -692,7 +694,8 @@
           "data"
         ],
         "responses": {},
-        "operationId": "delete-blackbox-incidents-manual-name"
+        "operationId": "delete-blackbox-incidents-manual-name",
+        "description": "Delete the latest Manual Incident for the current Session"
       }
     },
     "/blackbox/incidents/auto/{name}": {
@@ -713,7 +716,8 @@
             }
           }
         },
-        "operationId": "get-blackbox-incidents-auto"
+        "operationId": "get-blackbox-incidents-auto",
+        "description": "Retrieve automated incidents. To be deprecated?"
       },
       "parameters": [
         {
@@ -727,7 +731,7 @@
     },
     "/blackbox/state": {
       "get": {
-        "summary": "Retrieve the blackbox state",
+        "summary": "Retrieve the Blackbox state",
         "tags": [
           "status"
         ],
@@ -756,7 +760,7 @@
         "description": "Retrieve the blackbox State"
       },
       "put": {
-        "summary": "Update the blackbox state",
+        "summary": "Update the Blackbox state",
         "tags": [
           "status"
         ],
