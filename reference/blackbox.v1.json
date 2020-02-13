@@ -633,7 +633,7 @@
       },
       "parameters": []
     },
-    "/sessions": {
+    "/activesession": {
       "parameters": [
         {
           "required": true
@@ -781,6 +781,103 @@
         },
         "operationId": "put-blackbox-state",
         "description": "Update the blackbox state"
+      }
+    },
+    "/sessions": {
+      "get": {
+        "summary": "Retrieve the active session",
+        "operationId": "get-sessions",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/session/session.v1.json"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-sessions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-sessions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/blackbox/imu": {
+      "get": {
+        "summary": "Retrieve current IMU status",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/imu.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-blackbox-imu",
+        "description": "Retrieve current IMU status information"
+      },
+      "put": {
+        "summary": "Update IMU status",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/status/imu.v1.json"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/error.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-blackbox-imu",
+        "description": "Update the IMU status on the blackbox",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/status/imu.v1.json"
+              }
+            }
+          }
+        }
       }
     }
   },
