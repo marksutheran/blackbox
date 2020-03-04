@@ -1,0 +1,48 @@
+{
+  "title": "incidentstate",
+  "type": "object",
+  "x-examples": {
+    "example-1": {
+      "ts": 1234564545,
+      "type": "CREATE",
+      "incident": {
+        "timestamp": 123232333,
+        "demeritType": "Safety",
+        "infringementText": "Driving when drunk",
+        "location": {
+          "lat": 1.232233,
+          "lon": 107.3434
+        }
+      }
+    }
+  },
+  "properties": {
+    "timestamp": {
+      "type": "integer",
+      "format": "int64",
+      "description": "The timestamp of the Incident state update"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "CREATE",
+        "UPDATE",
+        "DELETE"
+      ],
+      "description": "The type of incident update - CREATE/UPDATE/DELETE  "
+    },
+    "incident": {
+      "$ref": "./manualincident.v1.json"
+    },
+    "id": {
+      "type": "string",
+      "description": "The server generated incident id"
+    }
+  },
+  "required": [
+    "timestamp",
+    "type",
+    "incident",
+    "id"
+  ]
+}

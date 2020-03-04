@@ -3,7 +3,13 @@
   "type": "object",
   "x-examples": {
     "example-1": {
-      "timestamp": 123232333
+      "timestamp": 123232333,
+      "demeritType": "Safety",
+      "infringementText": "Driving when drunk",
+      "location": {
+        "lat": 1.232233,
+        "lon": 107.3434
+      }
     }
   },
   "description": "Model of a manual driving infringement",
@@ -16,12 +22,6 @@
     },
     "infringementText": {
       "type": "string"
-    },
-    "points": {
-      "type": "integer"
-    },
-    "count": {
-      "type": "integer"
     },
     "timestamp": {
       "type": "integer"

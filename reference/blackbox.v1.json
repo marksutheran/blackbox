@@ -640,13 +640,13 @@
         }
       ]
     },
-    "/blackbox/incidents/manual/{name}": {
+    "/blackbox/incidents/manual/{id}": {
       "parameters": [
         {
           "schema": {
             "type": "string"
           },
-          "name": "name",
+          "name": "id",
           "in": "path"
         }
       ],
@@ -661,13 +661,47 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/data/manualincident.v1.json"
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/data/incidentstate.v1.json"
+                  }
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         },
         "operationId": "get-blackbox-incidents-manual-name",
+        "requestBody": {},
+        "description": "Retrieve Manual Incidents for current session"
+      },
+      "post": {
+        "summary": "Submit manual incidents",
+        "tags": [
+          "data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/data/incidentstate.v1.json"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "operationId": "post-blackbox-incidents-manual-name",
+        "description": "Create a new Manual Incident for the current Session",
         "requestBody": {
           "content": {
             "application/json": {
@@ -676,26 +710,58 @@
               }
             }
           }
-        },
-        "description": "Retrieve Manual Incidents for current session"
-      },
-      "post": {
-        "summary": "Submit manual incidents",
-        "tags": [
-          "data"
-        ],
-        "responses": {},
-        "operationId": "post-blackbox-incidents-manual-name",
-        "description": "Create a new Manual Incident for the current Session"
+        }
       },
       "delete": {
         "summary": "Remove manual incidents",
         "tags": [
           "data"
         ],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
         "operationId": "delete-blackbox-incidents-manual-name",
         "description": "Delete the latest Manual Incident for the current Session"
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-blackbox-incidents-manual-name",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/data/incidentstate.v1.json"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "description": "Update an existing incident",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/data/manualincident.v1.json"
+              }
+            }
+          }
+        }
       }
     },
     "/blackbox/incidents/auto/{name}": {
